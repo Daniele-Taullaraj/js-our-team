@@ -34,4 +34,13 @@ let team = [
 
 for (let i = 0; i < team.length; i++) {
     console.log(team[i]["nome"] + " " + team[i]["ruolo"])
+    document.querySelector(".container").innerHTML += ` 
+    <div class="card" style="width: 18rem;">
+        <img src="./img/${team[i]["immagine"]}" class="card-img-top" alt="" id="immagine">
+        <div class="card-body">
+            <p class="card-text" id="nome">${team[i]["nome"]}</p>
+            <p class="card-text" id="ruolo">${team[i]["ruolo"]}</p>
+
+        </div>
+    </div> `
 }
